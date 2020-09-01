@@ -54,7 +54,7 @@
      <Compile Include="Assets\Scripts\PersonMovement.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />
-     <Compile Include="Assets\DeathZone.cs" />
+     <Compile Include="Assets\Scripts\DeathZone.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity Projects/Mining-game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
