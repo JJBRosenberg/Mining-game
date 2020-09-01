@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PersonMovement : MonoBehaviour
 {
-    float speed = 5f;
+    [SerializeField] private float speed = 5f;
     private CharacterController cc;
     // Start is called before the first frame update
     private void Awake()
@@ -13,7 +13,12 @@ public class PersonMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
+    {
+        Move();
+    }
+
+    void Move()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -21,6 +26,14 @@ public class PersonMovement : MonoBehaviour
         Vector3 forward = transform.forward * vertical * speed * Time.deltaTime;
         Vector3 right = transform.right * horizontal * speed * Time.deltaTime;
 
+        bool isSprinting = Input.GetKey(KeyCode.LeftShift);
+        speed = 5f;
+        if (isSprinting)
+        {
+            speed = 10f;
+        }
+
         cc.Move(forward + right);
     }
+    
 }

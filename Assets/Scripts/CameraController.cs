@@ -32,8 +32,8 @@ public class CameraController : MonoBehaviour
 
     void Look()
     {
-        float mouseX = Input.GetAxisRaw("Mouse X") * sensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * sensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxisRaw("Mouse X") * sensitivity * Time.fixedDeltaTime;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * sensitivity * Time.fixedDeltaTime;
 
         yAxisClamp += mouseY;
 
