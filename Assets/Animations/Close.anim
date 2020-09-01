@@ -6,11 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Animations/Door Open.anim
-  m_Name: Door Open
-=======
   m_Name: Close
->>>>>>> 2aee2c5f23fddf980f9758218f0d1cc251c06375:Assets/Animations/Close.anim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
