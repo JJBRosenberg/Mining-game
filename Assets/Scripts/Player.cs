@@ -56,7 +56,8 @@ public class Player : MonoBehaviour
             if (hit.collider.tag == "Door")
             {
                 Animator anim = hit.collider.gameObject.GetComponent<Animator>();
-                anim.SetTrigger("OpenClose");
+                bool isOpen = anim.GetBool("isOpen");
+                anim.SetBool("isOpen", !isOpen);
             }
         }
     }
