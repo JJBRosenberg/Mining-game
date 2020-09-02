@@ -22,6 +22,31 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            isPaused = !isPaused;
+            if (isPaused)
+            {
+                
+            }
+            else
+            {
+                
+            }
+        }
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        player.enabled = false;
+        pauseMenu.SetActive(true);
+        cameraController.enabled = false;
+    }
+
+    void UnpauseGame()
+    {
+        Time.timeScale
     }
 }
