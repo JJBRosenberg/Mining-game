@@ -9,13 +9,13 @@ public class MinesText : MonoBehaviour
     [SerializeField] private Text minesText;
     void Start()
     {
-        minesText = GetComponent<Text>();
+        //minesText = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // minesText.text = "Mines collected: " 
-        //                  + Manager.GetManager().GetMinesCount();
+        minesText.text = "Mines collected: " 
+                         + Manager.GetManager().GetMinesCount();
     }
 }
