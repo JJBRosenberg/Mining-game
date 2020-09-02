@@ -28,7 +28,6 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, distance, layerMask))
         {
             interactText.SetActive(true);
-            Debug.Log("this works");
             RemoveMine(hit);
             OpenDoor(hit);
         }
@@ -44,6 +43,7 @@ public class Player : MonoBehaviour
         {
             if (hit.collider.tag == "Mine")
             {
+                Manager.GetManager().AddMinesCount();
                 Destroy(hit.collider.gameObject);
             }
         }
@@ -61,5 +61,5 @@ public class Player : MonoBehaviour
             }
         }
     }
-
+    
 }

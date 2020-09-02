@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 4890539715885780344}
   - component: {fileID: 109512382}
   - component: {fileID: 109512376}
+  - component: {fileID: 2368137770741431686}
   - component: {fileID: 14228055027955997}
   m_Layer: 0
   m_Name: Person
@@ -228,6 +229,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &2368137770741431686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6176044299223218833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95352af633d70ce419c0f46b1400179f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minesCount: 0
 --- !u!114 &14228055027955997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,3 +257,4 @@ MonoBehaviour:
   distance: 50
   interactText: {fileID: 0}
   cam: {fileID: 963194227}
+  minesCount: 0
