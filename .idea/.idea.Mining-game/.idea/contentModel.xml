@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Valentin Dimitrov\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Valentin Dimitrov\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Mining-game.-45035771.00" t="ExcludeRecursive" />
+    <e p="D:\Unity Projects\Mining-game" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="DeathZone.cs" t="Include" />
+          <e p="MinesText.cs" t="Include" />
+          <e p="Pause.cs" t="Include" />
+          <e p="Player Related" t="Include">
+            <e p="CameraController.cs" t="Include" />
+            <e p="Manager.cs" t="Include" />
+            <e p="PersonMovement.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+          </e>
+          <e p="Settings.cs" t="Include" />
+          <e p="StartGame.cs" t="Include" />
+          <e p="WinCondition.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Mining-game.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
