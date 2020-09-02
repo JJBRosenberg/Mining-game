@@ -39,6 +39,7 @@ public class Pause : MonoBehaviour
 
     public void PauseGame()
     {
+        isPaused = true;
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         player.enabled = false;
@@ -48,6 +49,7 @@ public class Pause : MonoBehaviour
 
     public void UnpauseGame()
     {
+        isPaused = false;
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         player.enabled = true;
@@ -57,6 +59,7 @@ public class Pause : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        Destroy(player.gameObject);
         SceneManager.LoadScene(0);
     }
 }

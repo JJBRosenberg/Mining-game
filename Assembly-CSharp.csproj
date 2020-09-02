@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\WinCondition.cs" />
      <Compile Include="Assets\Scripts\Player Related\PersonMovement.cs" />
      <Compile Include="Assets\Scripts\Pause.cs" />
+     <Compile Include="Assets\Scripts\Settings.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity Projects/Mining-game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

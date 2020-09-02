@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 14228055027955997}
   m_Layer: 0
   m_Name: Person
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,4 +257,4 @@ MonoBehaviour:
   distance: 50
   interactText: {fileID: 0}
   cam: {fileID: 963194227}
-  minesCount: 0
+  spawnPoint: {fileID: 0}
