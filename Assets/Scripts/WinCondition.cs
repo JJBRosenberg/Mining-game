@@ -10,24 +10,35 @@ public class WinCondition : MonoBehaviour
     [SerializeField] private int maxMinesCount;
     [SerializeField] private Text text;
     [SerializeField] private GameObject textToHide;
-    //[SerializeField] private Transform player;
+
+    [SerializeField] private bool isInArea;
+    [SerializeField] private Transform player;
+    [SerializeField] private GameObject[] mines;
 
     private void Start()
     {
-        // player = GameObject.FindGameObjectWithTag("Player").transform;
-        // player.position = transform.position;
+         player = GameObject.FindGameObjectWithTag("Player").transform;
+         player.position = transform.position;
+         mines = GameObject.FindGameObjectsWithTag("Mine");
+         maxMinesCount = mines.Length;
     }
 
 
     private void Update()
     {
-        if (Manager.GetManager().GetMinesCount() < maxMinesCount)
+        if (isInArea)
         {
-            text.text = "Mines left: " + (maxMinesCount - Manager.GetManager().GetMinesCount());
-        }
-        else
-        {
-            text.text = "VERI GUD U WIN";
+            if (Manager.GetManager().GetMinesCount() < maxMinesCount)
+            {
+                text.text = "Mines left: " + Manager.GetManager().GetMinesCount();
+                Debug.Log(Manager.GetManager().GetMinesCount());
+            }
+            else
+            {
+                Destroy(GameObject.FindGameObjectWithTag("Player"));
+                Cursor.lockState = CursorLockMode.None;
+                SceneManage.GoToScene(3);
+            }
         }
     }
 
@@ -37,6 +48,7 @@ public class WinCondition : MonoBehaviour
         if (Manager.GetManager().GetMinesCount() >= maxMinesCount)
         {
             //win condition
+            isInArea = true;
         }
         else if (Manager.GetManager().GetMinesCount() < maxMinesCount)
         {
@@ -47,6 +59,7 @@ public class WinCondition : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        isInArea = false;
         textToHide.SetActive(false);
     }
 }

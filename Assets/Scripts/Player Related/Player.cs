@@ -28,7 +28,6 @@ public class Player : MonoBehaviour
         {
             interactText.SetActive(true);
             RemoveMine(hit);
-            OpenDoor(hit);
         }
         else
         {
@@ -47,18 +46,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-
-    void OpenDoor(RaycastHit hit)
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (hit.collider.tag == "Door")
-            {
-                Animator anim = hit.collider.gameObject.GetComponent<Animator>();
-                bool isOpen = anim.GetBool("isOpen");
-                anim.SetBool("isOpen", !isOpen);
-            }
-        }
-    }
+    
     
 }

@@ -58,8 +58,10 @@
      <Compile Include="Assets\Scripts\Player Related\Player.cs" />
      <Compile Include="Assets\Scripts\MinesText.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />
+     <Compile Include="Assets\Scripts\SceneManage.cs" />
      <Compile Include="Assets\Scripts\WinCondition.cs" />
      <Compile Include="Assets\Scripts\Player Related\PersonMovement.cs" />
+     <Compile Include="Assets\DoorScript.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity Projects/Mining-game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
