@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
@@ -27,16 +28,16 @@ public class Pause : MonoBehaviour
             isPaused = !isPaused;
             if (isPaused)
             {
-                
+                PauseGame();
             }
             else
             {
-                
+                UnpauseGame();
             }
         }
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
@@ -45,8 +46,17 @@ public class Pause : MonoBehaviour
         cameraController.enabled = false;
     }
 
-    void UnpauseGame()
+    public void UnpauseGame()
     {
-        Time.timeScale
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        player.enabled = true;
+        pauseMenu.SetActive(false);
+        cameraController.enabled = true;
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
