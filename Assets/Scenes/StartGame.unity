@@ -1400,7 +1400,6 @@ GameObject:
   - component: {fileID: 1801194717}
   - component: {fileID: 1801194719}
   - component: {fileID: 1801194718}
-  - component: {fileID: 1801194720}
   m_Layer: 5
   m_Name: Mines Left
   m_TagString: Untagged
@@ -1469,18 +1468,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801194716}
   m_CullTransparentMesh: 0
---- !u!114 &1801194720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801194716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f3df1fb134dd2347a51df18f2ea1d26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1810169801 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7068536439732947498, guid: 7634e07f781a6044f835b74aed34d65c,
