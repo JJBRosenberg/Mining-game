@@ -52,14 +52,14 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Player Related\CameraController.cs" />
      <Compile Include="Assets\Scripts\DeathZone.cs" />
+     <Compile Include="Assets\Scripts\Settings.cs" />
+     <Compile Include="Assets\Scripts\Pause.cs" />
      <Compile Include="Assets\Scripts\Player Related\Manager.cs" />
      <Compile Include="Assets\Scripts\Player Related\Player.cs" />
      <Compile Include="Assets\Scripts\MinesText.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />
      <Compile Include="Assets\Scripts\WinCondition.cs" />
      <Compile Include="Assets\Scripts\Player Related\PersonMovement.cs" />
-     <Compile Include="Assets\Scripts\Pause.cs" />
-     <Compile Include="Assets\Scripts\Settings.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity Projects/Mining-game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

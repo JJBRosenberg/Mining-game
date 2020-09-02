@@ -9,11 +9,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float distance = 50f;
     [SerializeField] private GameObject interactText;
     [SerializeField] private Camera cam;
-    [SerializeField] private Transform spawnPoint;
 
     void Start()
     {
-        transform.position = spawnPoint.position;
     }
 
     // Update is called once per frame

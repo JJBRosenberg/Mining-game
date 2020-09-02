@@ -10,12 +10,12 @@ public class WinCondition : MonoBehaviour
     [SerializeField] private int maxMinesCount;
     [SerializeField] private Text text;
     [SerializeField] private GameObject textToHide;
-    [SerializeField] private Transform player;
+    //[SerializeField] private Transform player;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        player.position = transform.position;
+        // player = GameObject.FindGameObjectWithTag("Player").transform;
+        // player.position = transform.position;
     }
 
 

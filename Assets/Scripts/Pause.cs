@@ -17,7 +17,6 @@ public class Pause : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         cameraController = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
-
     }
 
     // Update is called once per frame
@@ -59,7 +58,6 @@ public class Pause : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        Destroy(player.gameObject);
         SceneManager.LoadScene(0);
     }
 }
