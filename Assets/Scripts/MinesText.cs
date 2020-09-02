@@ -15,6 +15,7 @@ public class MinesText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        minesText.text = "Mines collected: " + Manager.GetManager().GetMinesCount();
+        minesText.text = "Mines collected: " 
+                         + Manager.GetManager().GetMinesCount();
     }
 }

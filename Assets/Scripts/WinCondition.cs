@@ -10,15 +10,27 @@ public class WinCondition : MonoBehaviour
     [SerializeField] private int maxMinesCount;
     [SerializeField] private Text text;
     [SerializeField] private GameObject textToHide;
+    [SerializeField] private Transform player;
+
     private void Start()
     {
-        text = GetComponent<Text>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player.position = transform.position;
     }
+
 
     private void Update()
     {
-        text.text = "Mines left: " + Manager.GetManager().GetMinesCount();
+        if (Manager.GetManager().GetMinesCount() < maxMinesCount)
+        {
+            text.text = "Mines left: " + (maxMinesCount - Manager.GetManager().GetMinesCount());
+        }
+        else
+        {
+            text.text = "VERI GUD U WIN";
+        }
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
