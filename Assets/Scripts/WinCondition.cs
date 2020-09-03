@@ -8,7 +8,7 @@ public class WinCondition : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private int maxMinesCount;
-    [SerializeField] private Text text;
+    [SerializeField] private Text minesLeftText;
     [SerializeField] private GameObject textToHide;
 
     [SerializeField] private bool isInArea;
@@ -30,8 +30,8 @@ public class WinCondition : MonoBehaviour
         {
             if (Manager.GetManager().GetMinesCount() < maxMinesCount)
             {
-                text.text = "Mines left: " + Manager.GetManager().GetMinesCount();
-                Debug.Log(Manager.GetManager().GetMinesCount());
+                minesLeftText.text = "Mines left: " + (maxMinesCount - Manager.GetManager().GetMinesCount());
+
             }
             else
             {
@@ -45,17 +45,21 @@ public class WinCondition : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        isInArea = true;
         if (Manager.GetManager().GetMinesCount() >= maxMinesCount)
         {
             //win condition
-            isInArea = true;
+                
         }
         else if (Manager.GetManager().GetMinesCount() < maxMinesCount)
         {
             //not yet win condition
         }
-        textToHide.SetActive(true);
+
+        textToHide.SetActive(true);   
+        
     }
+
 
     private void OnTriggerExit(Collider other)
     {

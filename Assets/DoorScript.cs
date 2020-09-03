@@ -28,12 +28,12 @@ public class DoorScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isInRange = true;
-        interactText.SetActive(true);
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
         isInRange = false;
-        interactText.SetActive(false);
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -58,4 +59,20 @@ public class Player : MonoBehaviour
         
     }
 
+<<<<<<< HEAD
+=======
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Door"))
+        {
+            interactText.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        interactText.SetActive(false);
+    }
+>>>>>>> 0878b8244a523ec234bfac9fa9113ad39a31de03
 }
