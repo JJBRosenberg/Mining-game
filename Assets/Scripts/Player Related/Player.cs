@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public InventoryObjects inventory;
     [SerializeField] private float distance = 50f;
     [SerializeField] private GameObject interactText;
     [SerializeField] private Camera cam;
@@ -43,9 +43,19 @@ public class Player : MonoBehaviour
             {
                 Manager.GetManager().AddMinesCount();
                 Destroy(hit.collider.gameObject);
+                
             }
+            
         }
     }
-    
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        var item = GetComponent<item>();
+        if (item)
+        {
+            inventory.AddItem(item.Item, 1);
+        }
+        
+    }
+
 }
