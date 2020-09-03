@@ -87,6 +87,7 @@ public class Settings : MonoBehaviour
 
     public void ToggleFullScreen(bool isFullscreen)
     {
+        this.isFullscreen = isFullscreen;
         Screen.fullScreen = isFullscreen;
 
         if (!isFullscreen)

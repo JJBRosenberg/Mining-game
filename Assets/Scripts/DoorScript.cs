@@ -6,11 +6,10 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject interactText;
     [SerializeField] private bool isInRange;
     [SerializeField] private Animator anim;
     [SerializeField] private bool isOpen;
-
+    [SerializeField] private GameObject interactText;
 
     private void Update()
     {
@@ -27,13 +26,16 @@ public class DoorScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        isInRange = true;
-        
+        if (other.gameObject.tag == "Player")
+        {
+            isInRange = true;
+            interactText.SetActive(true);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         isInRange = false;
-        
+        interactText.SetActive(false);
     }
 }

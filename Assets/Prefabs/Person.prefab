@@ -238,7 +238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 2
-  interactText: {fileID: 0}
   cam: {fileID: 963194227}
 --- !u!54 &1631047358
 Rigidbody:

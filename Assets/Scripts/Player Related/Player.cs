@@ -27,12 +27,7 @@ public class Player : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, distance, layerMask))
         {
-            interactText.SetActive(true);
             RemoveMine(hit);
-        }
-        else
-        {
-            interactText.SetActive(false);
         }
     }
 
@@ -43,22 +38,10 @@ public class Player : MonoBehaviour
             if (hit.collider.tag == "Mine")
             {
                 Manager.GetManager().AddMinesCount();
+                interactText.SetActive(false);
                 Destroy(hit.collider.gameObject);
             }
         }
     }
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Door"))
-        {
-            interactText.SetActive(true);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        interactText.SetActive(false);
-    }
+    
 }
