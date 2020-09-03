@@ -18,7 +18,7 @@ public class Manager : MonoBehaviour
         {
             manager = this;
             minesCount = 0;
-            DontDestroyOnLoad(manager);
+            //DontDestroyOnLoad(manager);
         }
         else
         {

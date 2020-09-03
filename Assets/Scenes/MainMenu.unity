@@ -270,6 +270,31 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7068536438399609130, guid: 7634e07f781a6044f835b74aed34d65c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 899573090}
+    - target: {fileID: 7068536438399609130, guid: 7634e07f781a6044f835b74aed34d65c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068536438624353579, guid: 7634e07f781a6044f835b74aed34d65c,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 899573090}
+    - target: {fileID: 7068536438624353579, guid: 7634e07f781a6044f835b74aed34d65c,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleFullScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068536438624353579, guid: 7634e07f781a6044f835b74aed34d65c,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7068536439541477937, guid: 7634e07f781a6044f835b74aed34d65c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -279,6 +304,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068536439732947498, guid: 7634e07f781a6044f835b74aed34d65c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 899573090}
+    - target: {fileID: 7068536439732947498, guid: 7634e07f781a6044f835b74aed34d65c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetResolution
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7634e07f781a6044f835b74aed34d65c, type: 3}
@@ -503,6 +538,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131536565}
   m_CullTransparentMesh: 0
+--- !u!114 &252277902 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7068536438624353579, guid: 7634e07f781a6044f835b74aed34d65c,
+    type: 3}
+  m_PrefabInstance: {fileID: 18240036}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &279049165 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7068536439732947498, guid: 7634e07f781a6044f835b74aed34d65c,
@@ -1288,6 +1335,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: ec128ec903157f44aa6b30dbabed93db, type: 2}
   resolutionDropdown: {fileID: 279049165}
+  fullscreenToggle: {fileID: 252277902}
+  volumeSlider: {fileID: 1870245637}
 --- !u!1 &1430439778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2237,6 +2286,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865154445}
   m_CullTransparentMesh: 0
+--- !u!114 &1870245637 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7068536438399609130, guid: 7634e07f781a6044f835b74aed34d65c,
+    type: 3}
+  m_PrefabInstance: {fileID: 18240036}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1937304325
 GameObject:
   m_ObjectHideFlags: 0
