@@ -5,11 +5,12 @@ using UnityEngine;
 public class PersonMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
-    private CharacterController cc;
+
+    private Rigidbody rb;
     // Start is called before the first frame update
     private void Awake()
     {
-        cc = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -22,9 +23,8 @@ public class PersonMovement : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-
-        Vector3 forward = transform.forward * vertical * speed * Time.deltaTime;
-        Vector3 right = transform.right * horizontal * speed * Time.deltaTime;
+        Vector3 modifier = new Vector3(horizontal, 0, vertical);
+        Vector3 direction = Vector3.ClampMagnitude(modifier, 1);
 
         bool isSprinting = Input.GetKey(KeyCode.LeftShift);
         speed = 5f;
@@ -33,7 +33,10 @@ public class PersonMovement : MonoBehaviour
             speed = 10f;
         }
 
-        cc.Move(forward + right);
+        Quaternion rot = transform.rotation;
+        Vector3 velY = Vector3.up * rb.velocity.y;
+        rb.velocity = rot * direction * speed + velY;
+
     }
     
 }
