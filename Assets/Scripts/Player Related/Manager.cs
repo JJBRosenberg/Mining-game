@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -18,7 +20,7 @@ public class Manager : MonoBehaviour
         {
             manager = this;
             minesCount = 0;
-            //DontDestroyOnLoad(manager);
+            DontDestroyOnLoad(manager);
         }
         else
         {
@@ -27,6 +29,15 @@ public class Manager : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void AddMinesCount()
     {
         minesCount++;
