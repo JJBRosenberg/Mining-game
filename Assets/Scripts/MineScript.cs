@@ -8,19 +8,29 @@ public class MineScript : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private bool isInRange;
     [SerializeField] private GameObject interactText;
-
+    //[SerializeField] private int toolIndex;
 
     // Update is called once per frame
 
     private void OnTriggerEnter(Collider other)
     {
-        isInRange = true;
-        interactText.SetActive(true);
+        if (other.CompareTag("Player"))
+        {
+            Tool tool = other.gameObject.GetComponentInChildren<Tool>();
+            if (tool.GetName() == "Pliers")
+            {
+                isInRange = true;
+                interactText.SetActive(true);
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        isInRange = false;
-        interactText.SetActive(false);
+        if (other.CompareTag("Player"))
+        {
+            isInRange = false;
+            interactText.SetActive(false);
+        }
     }
 }

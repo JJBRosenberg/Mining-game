@@ -29,11 +29,16 @@ public class Player : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, distance, layerMask))
         {
-            Debug.Log("YES");
-            RemoveMine(hit);
-        } else
-        {
-            Debug.Log("NOPE");
+            Tool tool = GetComponentInChildren<Tool>();
+            if (tool.GetName() == "Pliers")
+            {
+                interactText.SetActive(true);
+                RemoveMine(hit);
+            }
+            else
+            {
+                interactText.SetActive(false);
+            }
         }
     }
 
@@ -43,16 +48,16 @@ public class Player : MonoBehaviour
         Debug.Log("here 0");
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log("here 1");
+
             if (hit.collider.tag == "Mine")
-            {
-                Debug.Log("here 2");
-                Manager.GetManager().AddMinesCount();
-                interactText.SetActive(false);
-                Destroy(hit.collider.gameObject);
-                completeText.SetActive(true);
-            }
+                {
+                    Manager.GetManager().AddMinesCount();
+                    interactText.SetActive(false);
+                    Destroy(hit.collider.gameObject);
+
+                }
             
+
         }
     }
     private void OnTriggerEnter(Collider other)

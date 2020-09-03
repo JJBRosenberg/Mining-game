@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f8fc9d9e37ea4884eb222c0e4eaa3e11, type: 2}
+  - {fileID: 2100000, guid: 7012101b060c5bd4ebe9e950d84b635a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -221,7 +221,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f8fc9d9e37ea4884eb222c0e4eaa3e11, type: 2}
+  - {fileID: 2100000, guid: 7012101b060c5bd4ebe9e950d84b635a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -252,6 +252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4185392921161199323}
+  - component: {fileID: 6080013279696727110}
   m_Layer: 0
   m_Name: metal detector - Copy
   m_TagString: Untagged
@@ -268,7 +269,7 @@ Transform:
   m_GameObject: {fileID: 3557368731054060641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.204136, y: 1.14, z: -6.964}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.48, y: 0.49333337, z: 1.48}
   m_Children:
   - {fileID: 7999678009693781917}
   - {fileID: 3865963172927269721}
@@ -277,6 +278,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6080013279696727110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557368731054060641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b5e17c2a9c0d4ba4d1db4348665ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  name: Metal Detector
+  toolSprite: {fileID: 0}
 --- !u!1 &3766421393309166691
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +352,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f8fc9d9e37ea4884eb222c0e4eaa3e11, type: 2}
+  - {fileID: 2100000, guid: 7012101b060c5bd4ebe9e950d84b635a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
