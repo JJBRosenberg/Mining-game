@@ -9,6 +9,8 @@ public class StartGame : MonoBehaviour
     public string options;
     public string credits;
     public string information;
+    public string tutorial;
+    public string tutorialDone;
 
     void Start()
     {
@@ -43,4 +45,13 @@ public class StartGame : MonoBehaviour
         Application.Quit();
     }
 
+    public void Tutorial()
+    {
+        SceneManager.LoadScene(tutorial);
+    }
+
+    public void TutorialDone()
+    {
+        SceneManager.LoadScene(tutorialDone);
+    }
 }

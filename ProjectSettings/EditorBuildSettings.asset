@@ -12,13 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/StartGame.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
-    path: Assets/Scenes/OptionsScreen.unity
+    path: 
     guid: be1c1e59009808a4ca71ee8bd6686d9e
   - enabled: 0
-    path: Assets/Scenes/Credits.unity
+    path: 
     guid: 38143c283328a0644841430cf7d4acd8
   - enabled: 0
-    path: Assets/Scenes/information.unity
+    path: 
     guid: 75521fdfcf1347842aeac39e76ce7bb8
   - enabled: 1
     path: Assets/Scenes/DeathScreen.unity
@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 06f1a9299d1a93f4e8b61442bbacf56e
+  - enabled: 1
+    path: Assets/Scenes/TutorialScreen.unity
+    guid: 5526babc5a47a4344be00992b9b69846
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 1f69c3e00ca511749915b83eb35b1834
   m_configObjects: {}
