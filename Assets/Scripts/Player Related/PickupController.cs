@@ -8,11 +8,10 @@ public class PickupController : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private Tool toolScript;
     [SerializeField] private Switcher switcher;
-    //[SerializeField] private Rigidbody rb;
     [SerializeField] private BoxCollider col;
     [SerializeField] private Transform player, toolContainer, fpsCam;
 
-    [SerializeField] private float pickupRange;
+    [SerializeField] private float pickupRange = 10f;
 
     [SerializeField] private bool isEquipped;
 

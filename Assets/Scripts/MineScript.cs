@@ -9,13 +9,14 @@ public class MineScript : MonoBehaviour
 
     [SerializeField] private bool isInRange;
     [SerializeField] private GameObject interactText;
+    [SerializeField] private string toolToUse;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             Tool tool = other.gameObject.GetComponentInChildren<Tool>();
-            if (tool.GetName() == "Pliers")
+            if (tool.GetName() == toolToUse)
             {
                 interactText.SetActive(true);
             }
@@ -24,9 +25,6 @@ public class MineScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            interactText.SetActive(false);
-        }
+        interactText.SetActive(false);
     }
 }

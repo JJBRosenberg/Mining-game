@@ -54,7 +54,6 @@ public class Player : MonoBehaviour
                     Manager.GetManager().AddMinesCount();
                     interactText.SetActive(false);
                     Destroy(hit.collider.gameObject);
-
                 }
             
 
