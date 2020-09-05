@@ -11,81 +11,102 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject interactText;
     [SerializeField] private GameObject completeText;
     [SerializeField] private Camera cam;
+    [SerializeField] private bool isHoldingRightTool;
+    private int layerMask;
+    private RaycastHit hit;
 
     void Start()
     {
-        completeText.SetActive(false);
+        layerMask = LayerMask.GetMask("Interactable");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //ObjectsCheck();
+        CheckForObjects();
     }
-    
-    
-    
-    // void ObjectsCheck()
-    // {
-    //     int layerMask = 1 << 8;
-    //     RaycastHit hit;
-    //     if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, distance, layerMask))
-    //     {
-    //         Tool tool = GetComponentInChildren<Tool>();
-    //         MineScript mineScript = hit.collider.GetComponent<MineScript>();
-    //         if (tool.GetName() == mineScript.toolToUse)
-    //         {
-    //             interactText.SetActive(true);
-    //             RemoveMine(hit);
-    //         }
-    //         else
-    //         {
-    //             interactText.SetActive(false);
-    //         }
-    //     }
-    // }
-    //
-    // void RemoveMine(RaycastHit hit)
-    // {
-    //     if (Input.GetKeyDown(KeyCode.F))
-    //     {
-    //
-    //         if (hit.collider.tag == "Mine")
-    //             {
-    //                 Manager.GetManager().AddMinesCount();
-    //                 interactText.SetActive(false);
-    //                 Destroy(hit.collider.gameObject);
-    //             }
-    //     }
-    // }
 
-    private void OnTriggerEnter(Collider other)
+
+    void CheckForObjects()
     {
-        if (other.gameObject.layer == 8)
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, distance, layerMask))
         {
-            if (other.CompareTag("Mine"))
+            if (hit.collider.CompareTag("Door"))
+            {
+                interactText.SetActive(true);
+            }
+            
+            else if (hit.collider.CompareTag("Mine"))
             {
                 Tool currTool = GetComponentInChildren<Tool>();
-                MineScript mine = other.gameObject.GetComponent<MineScript>();
+                MineScript mine = hit.collider.GetComponent<MineScript>();
                 if (currTool.GetName() == mine.toolToUse)
                 {
                     interactText.SetActive(true);
                 }
+                else if (currTool.GetName() != mine.toolToUse)
+                {
+                    interactText.SetActive(false);
+                }
             }
-            else
+
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                interactText.SetActive(true);
+                if (hit.collider.CompareTag("Door"))
+                {
+                    Animator doorAnim = hit.collider.GetComponentInChildren<Animator>();
+                    doorAnim.SetBool("isOpen", !doorAnim.GetBool("isOpen"));
+                }
+
+                if (hit.collider.CompareTag("Mine"))
+                {
+                    if (interactText.activeInHierarchy)
+                    {
+                        Destroy(hit.collider.gameObject);
+                        Manager.GetManager().AddMinesCount();
+                    }
+                }
             }
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.layer == 8)
+        else
         {
             interactText.SetActive(false);
         }
     }
+    
+
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.gameObject.layer == 8)
+    //     {
+    //         RaycastHit hit;
+    //         if (Physics.Raycast(cam.transform.position, cam.transform.forward, distance))
+    //         {
+    //             if (other.CompareTag("Mine"))
+    //             {
+    //                 Tool currTool = GetComponentInChildren<Tool>();
+    //                 MineScript mine = other.gameObject.GetComponent<MineScript>();
+    //                 if (currTool.GetName() == mine.toolToUse)
+    //                 {
+    //                     interactText.SetActive(true);
+    //                 }
+    //             }
+    //
+    //             else
+    //             {
+    //                 interactText.SetActive(true);
+    //             }
+    //         }
+    //     }
+    // }
+
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other.gameObject.layer == 8)
+    //     {
+    //         interactText.SetActive(false);
+    //     }
+    // }
 
     // private void OnTriggerEnter(Collider other)
     // {

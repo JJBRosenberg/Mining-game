@@ -5,7 +5,7 @@ using UnityEngine;
 public class Switcher : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private int currentTool;
+    [SerializeField] private int currentTool = 0;
     //[SerializeField] public List<Tool> tools;
     void Start()
     {
@@ -22,6 +22,7 @@ public class Switcher : MonoBehaviour
         if (previousTool != currentTool)
         {
             SwitchTool();
+            Manager.GetManager().SetCurrentToolUsed(transform.GetChild(currentTool).name);
         }
     }
 

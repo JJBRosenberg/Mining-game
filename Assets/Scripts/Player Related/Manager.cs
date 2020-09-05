@@ -8,6 +8,7 @@ public class Manager : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private int minesCount = 0;
+    [SerializeField] private string currentToolUsed;
     public static Manager GetManager()
     {
         return manager;
@@ -33,14 +34,26 @@ public class Manager : MonoBehaviour
         minesCount++;
     }
 
-    public int GetMinesCount()
+    public void SetCurrentToolUsed(string name)
     {
-        return minesCount;
+        currentToolUsed = name;
     }
 
     public void ResetMinesCount()
     {
         minesCount = 0;
     }
+    
+    public string GetCurrentToolUsed()
+    {
+        return currentToolUsed;
+    }
+    
+    public int GetMinesCount()
+    {
+        return minesCount;
+    }
+
+    
 
 }
