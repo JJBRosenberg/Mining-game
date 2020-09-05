@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 1159413800049623765}
   - component: {fileID: 1159413800049623764}
   - component: {fileID: 1159413800049623767}
-  - component: {fileID: 1159413800049623766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wire Cutter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,23 +111,3 @@ MonoBehaviour:
   index: 2
   name: Wire Cutter
   toolSprite: {fileID: 0}
---- !u!114 &1159413800049623766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159413800049623337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dee57e0bcaa83e4da9428746ca05758, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toolScript: {fileID: 1159413800049623767}
-  switcher: {fileID: 0}
-  col: {fileID: 1159413800049623764}
-  player: {fileID: 0}
-  toolContainer: {fileID: 0}
-  fpsCam: {fileID: 0}
-  pickupRange: 10
-  isEquipped: 0

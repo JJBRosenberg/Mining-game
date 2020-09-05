@@ -186,7 +186,7 @@ PrefabInstance:
     - target: {fileID: 861662317215406952, guid: 5265b824a3038374ea0178c6b95e4bbc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.91
+      value: 1.58463
       objectReference: {fileID: 0}
     - target: {fileID: 861662317215406952, guid: 5265b824a3038374ea0178c6b95e4bbc,
         type: 3}
@@ -858,10 +858,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1689939067, guid: 5c45ecc4c332bf649b3e7df696e9c2df, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1159413800049623337, guid: 5c45ecc4c332bf649b3e7df696e9c2df,
         type: 3}
       propertyPath: m_Name
@@ -942,11 +938,6 @@ PrefabInstance:
       propertyPath: toolSwitcher
       value: 
       objectReference: {fileID: 81658131}
-    - target: {fileID: 1159413800049623766, guid: 5c45ecc4c332bf649b3e7df696e9c2df,
-        type: 3}
-      propertyPath: pickupRange
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c45ecc4c332bf649b3e7df696e9c2df, type: 3}
 --- !u!1001 &4291405010213468249
@@ -976,11 +967,6 @@ PrefabInstance:
       propertyPath: minesLeftText
       value: 
       objectReference: {fileID: 179683706}
-    - target: {fileID: 4291405010095846945, guid: ffd2d57a5decd3443b343b3f5cbd456a,
-        type: 3}
-      propertyPath: sceneIndex
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4291405010095846949, guid: ffd2d57a5decd3443b343b3f5cbd456a,
         type: 3}
       propertyPath: m_LocalPosition.x

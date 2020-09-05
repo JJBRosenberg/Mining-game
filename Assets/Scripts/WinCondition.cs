@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class WinCondition : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private int maxMinesCount;
+    [SerializeField] private int maxMinesCount, sceneIndex;
     [SerializeField] private Text minesLeftText;
     [SerializeField] private GameObject textToHide;
 
@@ -35,9 +35,10 @@ public class WinCondition : MonoBehaviour
             }
             else
             {
-                Destroy(GameObject.FindGameObjectWithTag("Player"));
+                //GameObject.FindGameObjectWithTag("Player").SetActive(false);
                 Cursor.lockState = CursorLockMode.None;
-                SceneManage.GoToScene(2);
+                Manager.GetManager().ResetMinesCount();
+                SceneManage.GoToScene(sceneIndex);
             }
         }
     }

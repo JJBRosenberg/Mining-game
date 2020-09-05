@@ -7,30 +7,30 @@ public class PickupController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private Tool toolScript;
-    [SerializeField] private Switcher switcher;
     [SerializeField] private BoxCollider col;
     [SerializeField] private Transform player, toolContainer, fpsCam;
+    [SerializeField] private GameObject interactText;
+    [SerializeField] private Switcher toolSwitcher;
 
     [SerializeField] private float pickupRange = 10f;
 
-    [SerializeField] private bool isEquipped;
+    [SerializeField] private bool isEquipped, isInRange;
 
     [SerializeField] private static bool slotFull;
 
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         if (!isEquipped)
         {
             toolScript.enabled = false;
-            //rb.isKinematic = false;
             col.isTrigger = false;
         }
 
         if (isEquipped)
         {
             toolScript.enabled = true;
-            //rb.isKinematic = true;
             col.isTrigger = true;
             slotFull = true;
         }
@@ -39,9 +39,30 @@ public class PickupController : MonoBehaviour
     void Update()
     {
         Vector3 dist = player.position - transform.position;
-        if (!isEquipped && dist.magnitude <= pickupRange && Input.GetKeyDown(KeyCode.F) && !slotFull)
+
+
+        if (dist.magnitude <= pickupRange)
         {
-            Pickup();
+            isInRange = true;
+            if (!isEquipped && Input.GetKeyDown(KeyCode.F) && !slotFull)
+            {
+                Debug.Log("Added tool: " + toolScript.GetName());
+                interactText.SetActive(false);
+                Pickup();
+            }
+        }
+        else
+        {
+            isInRange = false;
+        }
+
+        if (isInRange)
+        {
+            interactText.SetActive(true);
+        }
+        if (!isInRange)
+        {
+            interactText.SetActive(false);
         }
     }
     
@@ -52,11 +73,23 @@ public class PickupController : MonoBehaviour
         transform.SetParent(toolContainer);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.Euler(Vector3.zero);
-        
-        //rb.isKinematic = true;
+        toolSwitcher.SetCurrentToolIndex(toolContainer.childCount-1);
+        toolSwitcher.SwitchTool();
         col.isTrigger = true;
         
         toolScript.enabled = false;
 
     }
+
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     isInRange = true;
+    //     interactText.SetActive(true);
+    // }
+    //
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     isInRange = false;
+    //     interactText.SetActive(false);
+    // }
 }

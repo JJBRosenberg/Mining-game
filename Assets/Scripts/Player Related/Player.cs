@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    public InventoryObjects inventory;
+    //public InventoryObjects inventory;
     [SerializeField] private float distance = 50f;
     [SerializeField] private GameObject interactText;
     [SerializeField] private GameObject completeText;
@@ -20,52 +20,80 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ObjectsCheck();
+        //ObjectsCheck();
     }
+    
+    
+    
+    // void ObjectsCheck()
+    // {
+    //     int layerMask = 1 << 8;
+    //     RaycastHit hit;
+    //     if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, distance, layerMask))
+    //     {
+    //         Tool tool = GetComponentInChildren<Tool>();
+    //         MineScript mineScript = hit.collider.GetComponent<MineScript>();
+    //         if (tool.GetName() == mineScript.toolToUse)
+    //         {
+    //             interactText.SetActive(true);
+    //             RemoveMine(hit);
+    //         }
+    //         else
+    //         {
+    //             interactText.SetActive(false);
+    //         }
+    //     }
+    // }
+    //
+    // void RemoveMine(RaycastHit hit)
+    // {
+    //     if (Input.GetKeyDown(KeyCode.F))
+    //     {
+    //
+    //         if (hit.collider.tag == "Mine")
+    //             {
+    //                 Manager.GetManager().AddMinesCount();
+    //                 interactText.SetActive(false);
+    //                 Destroy(hit.collider.gameObject);
+    //             }
+    //     }
+    // }
 
-    void ObjectsCheck()
+    private void OnTriggerEnter(Collider other)
     {
-        int layerMask = 1 << 8;
-        RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, distance, layerMask))
+        if (other.gameObject.layer == 8)
         {
-            Tool tool = GetComponentInChildren<Tool>();
-            if (tool.GetName() == "Pliers")
+            if (other.CompareTag("Mine"))
             {
-                interactText.SetActive(true);
-                RemoveMine(hit);
+                Tool currTool = GetComponentInChildren<Tool>();
+                MineScript mine = other.gameObject.GetComponent<MineScript>();
+                if (currTool.GetName() == mine.toolToUse)
+                {
+                    interactText.SetActive(true);
+                }
             }
             else
             {
-                interactText.SetActive(false);
+                interactText.SetActive(true);
             }
         }
     }
 
-    void RemoveMine(RaycastHit hit)
+    private void OnTriggerExit(Collider other)
     {
-
-        Debug.Log("here 0");
-        if (Input.GetKeyDown(KeyCode.F))
+        if (other.gameObject.layer == 8)
         {
-
-            if (hit.collider.tag == "Mine")
-                {
-                    Manager.GetManager().AddMinesCount();
-                    interactText.SetActive(false);
-                    Destroy(hit.collider.gameObject);
-                }
-            
-
+            interactText.SetActive(false);
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        var item = GetComponent<item>();
-        if (item)
-        {
-            inventory.AddItem(item.Item, 1);
-        }
-        
-    }
+
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     var item = GetComponent<item>();
+    //     if (item)
+    //     {
+    //         inventory.AddItem(item.Item, 1);
+    //     }
+    //     
+    // }
 }

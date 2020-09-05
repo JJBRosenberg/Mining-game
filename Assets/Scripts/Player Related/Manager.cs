@@ -27,17 +27,7 @@ public class Manager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    // Update is called once per frame
-
-    private void Update()
-    {
-        if (SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
+    
     public void AddMinesCount()
     {
         minesCount++;
@@ -46,6 +36,11 @@ public class Manager : MonoBehaviour
     public int GetMinesCount()
     {
         return minesCount;
+    }
+
+    public void ResetMinesCount()
+    {
+        minesCount = 0;
     }
 
 }

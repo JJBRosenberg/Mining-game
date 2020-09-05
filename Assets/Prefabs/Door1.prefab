@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 920282416511320587}
   - component: {fileID: 8947220889776150566}
   - component: {fileID: 8755277376104619372}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface1
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4975623523615795212}
   - component: {fileID: 5640520588058571444}
   - component: {fileID: 5640520588058571447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door1
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -143,7 +143,6 @@ MonoBehaviour:
   isInRange: 0
   anim: {fileID: 5723868957426038581}
   isOpen: 0
-  interactText: {fileID: 0}
 --- !u!1 &5723868957426038580
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +156,7 @@ GameObject:
   - component: {fileID: 5723868957426038571}
   - component: {fileID: 5723868957426038570}
   - component: {fileID: 5723868957426038581}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorHinge
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -272,7 +271,7 @@ GameObject:
   - component: {fileID: 2768540415246870856}
   - component: {fileID: 3670523867295367046}
   - component: {fileID: 4125955647266000187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -356,7 +355,7 @@ GameObject:
   - component: {fileID: 4541439399876821244}
   - component: {fileID: 4650429666602831652}
   - component: {fileID: 1404062286677590929}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube5
   m_TagString: Untagged
   m_Icon: {fileID: 0}

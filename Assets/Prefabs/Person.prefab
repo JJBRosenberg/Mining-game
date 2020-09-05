@@ -176,7 +176,6 @@ GameObject:
   - component: {fileID: 2368137770741431686}
   - component: {fileID: 14228055027955997}
   - component: {fileID: 1631047358}
-  - component: {fileID: 1078816899}
   m_Layer: 0
   m_Name: Person
   m_TagString: Player
@@ -299,10 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b1b2485c35f8647976a65f258a710b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   distance: 2
-  interactText: {fileID: 0}
-  cam: {fileID: 963194227}
 --- !u!54 &1631047358
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -319,26 +315,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &1078816899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6176044299223218833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dee57e0bcaa83e4da9428746ca05758, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toolScript: {fileID: 0}
-  rb: {fileID: 0}
-  col: {fileID: 0}
-  player: {fileID: 0}
-  toolContainer: {fileID: 0}
-  fpsCam: {fileID: 0}
-  pickupRange: 0
-  isEquipped: 0
 --- !u!1 &6266596182104861276
 GameObject:
   m_ObjectHideFlags: 0

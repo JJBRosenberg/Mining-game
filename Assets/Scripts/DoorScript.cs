@@ -9,7 +9,6 @@ public class DoorScript : MonoBehaviour
     [SerializeField] private bool isInRange;
     [SerializeField] private Animator anim;
     [SerializeField] private bool isOpen;
-    [SerializeField] private GameObject interactText;
 
     private void Update()
     {
@@ -29,13 +28,11 @@ public class DoorScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             isInRange = true;
-            interactText.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         isInRange = false;
-        interactText.SetActive(false);
     }
 }

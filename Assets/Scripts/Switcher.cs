@@ -6,10 +6,9 @@ public class Switcher : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private int currentTool;
-    [SerializeField] public List<Tool> tools;
+    //[SerializeField] public List<Tool> tools;
     void Start()
     {
-        tools = new List<Tool>();
     }
 
     // Update is called once per frame
@@ -70,7 +69,7 @@ public class Switcher : MonoBehaviour
         }
     }
     
-    void SwitchTool()
+    public void SwitchTool()
     {
         int i = 0;
 
@@ -89,9 +88,14 @@ public class Switcher : MonoBehaviour
         
     }
 
-    public void AddTool(Tool t)
+    // public void AddTool(Tool t)
+    // {
+    //     tools.Add(t);
+    // }
+
+    public void SetCurrentToolIndex(int value)
     {
-        tools.Add(t);
+        currentTool = value;
     }
 
 }
