@@ -23,7 +23,7 @@ public class MetalDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Manager.GetManager().GetMinesCount() > 0)
+        if (Manager.GetManager().GetMinesLeft() > 0)
         {
             if (closestMine == null)
             {
@@ -35,6 +35,10 @@ public class MetalDetector : MonoBehaviour
             float dist = (closestMine.position - transform.position).magnitude;
             soundFrequency = dist / 20;
             MakeSound();
+        }
+        else
+        {
+            mines.Clear();
         }
     }
 
