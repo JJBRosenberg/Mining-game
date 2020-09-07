@@ -30,14 +30,14 @@ public class WinCondition : MonoBehaviour
         {
             if (Manager.GetManager().GetMinesCount() < maxMinesCount)
             {
-                minesLeftText.text = "Mines left: " + (maxMinesCount - Manager.GetManager().GetMinesCount());
+               // minesLeftText.text = "Mines left: " + (maxMinesCount - Manager.GetManager().GetMinesCount());
 
             }
             else
             {
                 Destroy(GameObject.FindGameObjectWithTag("Player"));
                 Cursor.lockState = CursorLockMode.None;
-                SceneManage.GoToScene(3);
+                SceneManage.GoToScene(2);
             }
         }
     }
