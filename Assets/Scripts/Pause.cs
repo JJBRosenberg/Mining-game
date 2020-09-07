@@ -58,6 +58,8 @@ public class Pause : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        Destroy(player.gameObject);
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 }

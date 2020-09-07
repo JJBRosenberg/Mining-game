@@ -6,62 +6,115 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    public InventoryObjects inventory;
+    //public InventoryObjects inventory;
     [SerializeField] private float distance = 50f;
     [SerializeField] private GameObject interactText;
     [SerializeField] private GameObject completeText;
     [SerializeField] private Camera cam;
+    [SerializeField] private bool isHoldingRightTool;
+    private int layerMask;
+    private RaycastHit hit;
 
     void Start()
     {
-        completeText.SetActive(false);
+        layerMask = LayerMask.GetMask("Interactable");
     }
 
     // Update is called once per frame
     void Update()
     {
-        ObjectsCheck();
+        CheckForObjects();
     }
 
-    void ObjectsCheck()
+
+    void CheckForObjects()
     {
-        int layerMask = 1 << 8;
-        RaycastHit hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, distance, layerMask))
         {
-            Debug.Log("YES");
-            RemoveMine(hit);
-        } else
-        {
-            Debug.Log("NOPE");
-        }
-    }
-
-    void RemoveMine(RaycastHit hit)
-    {
-
-        Debug.Log("here 0");
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("here 1");
-            if (hit.collider.tag == "Mine")
+            if (hit.collider.CompareTag("Door"))
             {
-                Debug.Log("here 2");
-                Manager.GetManager().AddMinesCount();
-                interactText.SetActive(false);
-                Destroy(hit.collider.gameObject);
-                completeText.SetActive(true);
+                interactText.SetActive(true);
             }
             
+            else if (hit.collider.CompareTag("Mine"))
+            {
+                Tool currTool = GetComponentInChildren<Tool>();
+                MineScript mine = hit.collider.GetComponent<MineScript>();
+                if (currTool.GetName() == mine.toolToUse)
+                {
+                    interactText.SetActive(true);
+                }
+                else if (currTool.GetName() != mine.toolToUse)
+                {
+                    interactText.SetActive(false);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (hit.collider.CompareTag("Door"))
+                {
+                    Animator doorAnim = hit.collider.GetComponentInChildren<Animator>();
+                    doorAnim.SetBool("isOpen", !doorAnim.GetBool("isOpen"));
+                }
+
+                if (hit.collider.CompareTag("Mine"))
+                {
+                    if (interactText.activeInHierarchy)
+                    {
+                        Manager.GetManager().RemoveMine(hit.collider.gameObject);
+                        Manager.GetManager().AddMinesCount();
+                    }
+                }
+            }
         }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        var item = GetComponent<item>();
-        if (item)
+        else
         {
-            inventory.AddItem(item.Item, 1);
+            interactText.SetActive(false);
         }
-        
     }
+    
+
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.gameObject.layer == 8)
+    //     {
+    //         RaycastHit hit;
+    //         if (Physics.Raycast(cam.transform.position, cam.transform.forward, distance))
+    //         {
+    //             if (other.CompareTag("Mine"))
+    //             {
+    //                 Tool currTool = GetComponentInChildren<Tool>();
+    //                 MineScript mine = other.gameObject.GetComponent<MineScript>();
+    //                 if (currTool.GetName() == mine.toolToUse)
+    //                 {
+    //                     interactText.SetActive(true);
+    //                 }
+    //             }
+    //
+    //             else
+    //             {
+    //                 interactText.SetActive(true);
+    //             }
+    //         }
+    //     }
+    // }
+
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other.gameObject.layer == 8)
+    //     {
+    //         interactText.SetActive(false);
+    //     }
+    // }
+
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     var item = GetComponent<item>();
+    //     if (item)
+    //     {
+    //         inventory.AddItem(item.Item, 1);
+    //     }
+    //     
+    // }
 }

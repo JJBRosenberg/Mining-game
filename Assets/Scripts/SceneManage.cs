@@ -11,4 +11,9 @@ public class SceneManage : MonoBehaviour
         SceneManager.LoadScene(index);
     }
 
+    public void RemovePlayer()
+    {
+        Destroy(Manager.GetManager().gameObject);
+    }
+
 }
