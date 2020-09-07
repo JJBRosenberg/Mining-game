@@ -10,13 +10,4 @@ public class MineScript : MonoBehaviour
     
     [SerializeField] public string toolToUse;
 
-
-    private void Start()
-    {
-    }
-
-    private void Update()
-    {
-    }
-
 }

@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
                 {
                     if (interactText.activeInHierarchy)
                     {
-                        Destroy(hit.collider.gameObject);
+                        Manager.GetManager().RemoveMine(hit.collider.gameObject);
                         Manager.GetManager().AddMinesCount();
                     }
                 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,7 @@ public class Manager : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private int minesCount = 0;
+    [SerializeField] private List<GameObject> mines;
     [SerializeField] private string currentToolUsed;
     public static Manager GetManager()
     {
@@ -21,6 +23,7 @@ public class Manager : MonoBehaviour
         {
             manager = this;
             minesCount = 0;
+            mines = GameObject.FindGameObjectsWithTag("Mine").ToList();
             DontDestroyOnLoad(manager);
         }
         else
@@ -54,6 +57,11 @@ public class Manager : MonoBehaviour
         return minesCount;
     }
 
+    public void RemoveMine(GameObject mine)
+    {
+        Destroy(mine);
+        mines.Remove(mine);
+    }
     
 
 }
