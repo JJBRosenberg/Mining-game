@@ -26,7 +26,7 @@ public class Manager : MonoBehaviour
             minesCount = 0;
             mines = GameObject.FindGameObjectsWithTag("Mine").ToList();
             minesLeft = mines.Count;
-            DontDestroyOnLoad(manager);
+            //DontDestroyOnLoad(manager);
         }
         else
         {
