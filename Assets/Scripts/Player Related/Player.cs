@@ -60,8 +60,10 @@ public class Player : MonoBehaviour
 
                 if (hit.collider.CompareTag("Mine"))
                 {
+                    
                     if (interactText.activeInHierarchy)
                     {
+                        Debug.Log("here");
                         Manager.GetManager().RemoveMine(hit.collider.gameObject);
                         Manager.GetManager().AddMinesCount();
                     }
