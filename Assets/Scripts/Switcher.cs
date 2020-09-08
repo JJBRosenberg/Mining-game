@@ -14,15 +14,18 @@ public class Switcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int previousTool = currentTool;
-        
-        ChangeWithScroll();
-        ChangeWithKeyPress();
-
-        if (previousTool != currentTool)
+        if (!Manager.GetManager().GetPaused())
         {
-            SwitchTool();
-            Manager.GetManager().SetCurrentToolUsed(transform.GetChild(currentTool).name);
+            int previousTool = currentTool;
+
+            ChangeWithScroll();
+            ChangeWithKeyPress();
+
+            if (previousTool != currentTool)
+            {
+                SwitchTool();
+                Manager.GetManager().SetCurrentToolUsed(transform.GetChild(currentTool).name);
+            }
         }
     }
 

@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MetalDetector : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private AudioClip beepSound;
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private float soundFrequency;
     [SerializeField] private float timer;
     [SerializeField] private Transform closestMine;
@@ -69,7 +71,7 @@ public class MetalDetector : MonoBehaviour
     {
         if (Time.time >= timer + soundFrequency)
         {
-            AudioSource.PlayClipAtPoint(beepSound, transform.position);
+            audioSource.PlayOneShot(beepSound, audioSource.volume);
             timer = Time.time;
         }
     }
