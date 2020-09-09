@@ -13,7 +13,7 @@ public class PersonMovement : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        cameraAnimator = cam.GetComponent<Animator>();
+        //cameraAnimator = cam.GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -27,7 +27,7 @@ public class PersonMovement : MonoBehaviour
         {
             isMoving = false;
         }
-        cameraAnimator.SetBool("isMoving", isMoving);
+        //cameraAnimator.SetBool("isMoving", isMoving);
     }
     
     // Update is called once per frame

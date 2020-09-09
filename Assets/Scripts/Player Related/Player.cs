@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip useSound;
     [SerializeField] private GameObject completeText;
     [SerializeField] private Camera cam;
+    [SerializeField] private Canvas canvas;
 
     private int layerMask;
     private RaycastHit hit;
@@ -90,6 +91,7 @@ public class Player : MonoBehaviour
                     {
                         Manager.GetManager().RemoveMine(hit.collider.gameObject);
                         Manager.GetManager().AddMinesCount();
+                        //canvas.SetActive(true);
                     }
                 }
             }

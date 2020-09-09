@@ -10,7 +10,7 @@ public class WinCondition : MonoBehaviour
     [SerializeField] private int maxMinesCount, sceneIndex;
     [SerializeField] private Text minesLeftText;
     [SerializeField] private GameObject textToHide;
-
+    [SerializeField] public Canvas canvas;
     [SerializeField] private bool isInArea;
     [SerializeField] private Transform player;
     [SerializeField] private GameObject[] mines;
@@ -30,8 +30,8 @@ public class WinCondition : MonoBehaviour
         {
             if (Manager.GetManager().GetMinesCount() < maxMinesCount)
             {
-               // minesLeftText.text = "Mines left: " + (maxMinesCount - Manager.GetManager().GetMinesCount());
-
+                // minesLeftText.text = "Mines left: " + (maxMinesCount - Manager.GetManager().GetMinesCount());
+                //canvas.SetActive(true);
             }
             else
             {
