@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
         {
             if (hit.collider.CompareTag("Door"))
             {
-                Animator doorAnim = hit.collider.GetComponentInChildren<Animator>();
+                Animator doorAnim = hit.collider.GetComponent<DoorScript>().GetAnim();
                 doorAnim.SetBool("isOpen", !doorAnim.GetBool("isOpen"));
             }
 

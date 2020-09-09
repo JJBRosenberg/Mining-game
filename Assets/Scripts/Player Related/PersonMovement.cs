@@ -5,15 +5,12 @@ using UnityEngine;
 public class PersonMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
-    [SerializeField] private Camera cam;
-    [SerializeField] private Animator cameraAnimator;
-    [SerializeField] private bool isMoving;
+    [SerializeField] public bool isMoving;
     
     private Rigidbody rb;
     // Start is called before the first frame update
     private void Awake()
     {
-        cameraAnimator = cam.GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -27,7 +24,7 @@ public class PersonMovement : MonoBehaviour
         {
             isMoving = false;
         }
-        cameraAnimator.SetBool("isMoving", isMoving);
+        //cameraAnimator.SetBool("isMoving", isMoving);
     }
     
     // Update is called once per frame
