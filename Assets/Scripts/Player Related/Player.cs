@@ -6,12 +6,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    //public InventoryObjects inventory;
     [SerializeField] private float distance = 50f;
     [SerializeField] private GameObject interactText;
+    [SerializeField] private AudioClip useSound;
     [SerializeField] private GameObject completeText;
     [SerializeField] private Camera cam;
-    [SerializeField] private bool isHoldingRightTool;
+
     private int layerMask;
     private RaycastHit hit;
 
@@ -77,11 +77,15 @@ public class Player : MonoBehaviour
 
             if (hit.collider.CompareTag("Mine"))
             {
-                //Tool currTool = GetComponentInChildren<Tool>();
+                Tool currTool = GetComponentInChildren<Tool>();
                 MineScript mine = hit.collider.GetComponent<MineScript>();
                 if (interactText.activeInHierarchy)
                 {
+                    
                     mine.SetToolIndex(mine.GetNeededToolIndex() + 1);
+
+                    AudioManager.audioManager.PlaySound(currTool.GetSound(), transform.position);
+                    
                     if (mine.GetNeededToolIndex() == mine.GetLastToolIndex())
                     {
                         Manager.GetManager().RemoveMine(hit.collider.gameObject);

@@ -5,14 +5,31 @@ using UnityEngine;
 public class PersonMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
-
+    [SerializeField] private Camera cam;
+    [SerializeField] private Animator cameraAnimator;
+    [SerializeField] private bool isMoving;
+    
     private Rigidbody rb;
     // Start is called before the first frame update
     private void Awake()
     {
+        cameraAnimator = cam.GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
+    void Update()
+    {
+        if (rb.velocity != Vector3.zero)
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
+        cameraAnimator.SetBool("isMoving", isMoving);
+    }
+    
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -25,7 +42,7 @@ public class PersonMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         Vector3 modifier = new Vector3(horizontal, 0, vertical);
         Vector3 direction = Vector3.ClampMagnitude(modifier, 1);
-
+        
         bool isSprinting = Input.GetKey(KeyCode.LeftShift);
         speed = 5f;
         if (isSprinting)

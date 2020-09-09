@@ -6,12 +6,15 @@ public class Tool : MonoBehaviour
 {
     public enum ToolName
     {
-        Pliers,
-        WireCutter
+        Shovel,
+        WireCutter,
+        Gloves,
+        AngleGrinder
     };
     // Start is called before the first frame update
-    [SerializeField] private int index;
+    //[SerializeField] private int index;
     [SerializeField] private string name;
+    [SerializeField] private AudioClip sound;
     [SerializeField] private Sprite toolSprite;
     //[SerializeField] private ToolName toolName;
     void Start()
@@ -25,11 +28,10 @@ public class Tool : MonoBehaviour
         
     }
 
-    // public ToolName GetIndex()
-    // {
-    //     return toolName;
-    // }
-
+    public AudioClip GetSound()
+    {
+        return sound;
+    }
     public string GetName()
     {
         return name;
