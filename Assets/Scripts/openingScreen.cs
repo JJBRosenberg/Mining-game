@@ -11,10 +11,12 @@ public class openingScreen : MonoBehaviour
     {
         instructionCanvas.gameObject.SetActive(true);
         HUD.gameObject.SetActive(false);
-        //Time.timeScale = 0;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        cameraController = player.GetComponentInChildren<CameraController>();
+        Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
-        //player.enabled = false;
-        //cameraController.enabled = false;
+        player.enabled = false;
+        cameraController.enabled = false;
 
     }
 
