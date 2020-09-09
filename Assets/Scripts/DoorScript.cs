@@ -11,11 +11,17 @@ public class DoorScript : MonoBehaviour
 
     private void Start()
     {
-        anim = GetComponentInChildren<Animator>();
+        //anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
     {
         doorCol.enabled = !anim.GetBool("isOpen");
     }
+
+    public Animator GetAnim()
+    {
+        return anim;
+    }
+    
 }
