@@ -8,19 +8,24 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float sensitivity;
 
     [SerializeField] private GameObject player;
-
+    [SerializeField] private Animator cameraAnimator;
+    
     private float yAxisClamp; // just so it reaches a limit at top and bottom
 
+    private PersonMovement playerScript;
     // Start is called before the first frame update
+    
 
-    private void Awake()
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        playerScript = GetComponentInParent<PersonMovement>();
+        cameraAnimator = GetComponent<Animator>();
     }
 
-    void Start()
+    private void Update()
     {
-
+        cameraAnimator.SetBool("isWalking", playerScript.isMoving);
     }
 
     // Update is called once per frame
