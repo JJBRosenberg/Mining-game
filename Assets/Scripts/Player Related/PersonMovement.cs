@@ -6,7 +6,7 @@ public class PersonMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] public bool isMoving;
-    
+
     private Rigidbody rb;
     // Start is called before the first frame update
     private void Awake()
@@ -35,8 +35,8 @@ public class PersonMovement : MonoBehaviour
 
     void Move()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
         Vector3 modifier = new Vector3(horizontal, 0, vertical);
         Vector3 direction = Vector3.ClampMagnitude(modifier, 1);
         
@@ -46,11 +46,11 @@ public class PersonMovement : MonoBehaviour
         {
             speed = 10f;
         }
-
+        
         Quaternion rot = transform.rotation;
         Vector3 velY = Vector3.up * rb.velocity.y;
         rb.velocity = rot * direction * speed + velY;
-
+        //controller.Move(direction * speed);
     }
     
 }
