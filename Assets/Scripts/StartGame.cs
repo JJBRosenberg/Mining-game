@@ -50,6 +50,11 @@ public class StartGame : MonoBehaviour
         SceneManager.LoadScene(tutorial);
     }
 
+    public void OpenURL(string url)
+    {
+        Application.OpenURL(url);
+    }
+    
     public void TutorialDone()
     {
         SceneManager.LoadScene(tutorialDone);
