@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6024903403391797373}
   - component: {fileID: 6024903403391797372}
   - component: {fileID: 6024903403391797375}
-  - component: {fileID: 6024903403391797374}
   m_Layer: 8
   m_Name: Mine
   m_TagString: Mine
@@ -109,20 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c928ce50e2d80544835adfee680f123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInRange: 0
   toolToUse: Pliers
-  player: {fileID: 0}
-  interactText: {fileID: 0}
---- !u!65 &6024903403391797374
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6024903403391797369}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.1961136, y: 1, z: 3.7891202}
-  m_Center: {x: -0.21227813, y: 0, z: 0.11027217}

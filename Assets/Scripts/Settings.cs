@@ -105,7 +105,7 @@ public class Settings : MonoBehaviour
     public void SetVolume(float value)
     {
         PlayerPrefs.SetFloat("MVolume", value);
-        audioMixer.SetFloat("Volume", PlayerPrefs.GetFloat("Volume"));
+        audioMixer.SetFloat("Volume", Mathf.Log(value) * 20);
     }
 
     public void SetResolution(int resolutionIndex)

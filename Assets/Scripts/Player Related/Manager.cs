@@ -12,6 +12,7 @@ public class Manager : MonoBehaviour
     [SerializeField] private int minesLeft;
     [SerializeField] private List<GameObject> mines;
     [SerializeField] private string currentToolUsed;
+    [SerializeField] private bool isPaused;
     public static Manager GetManager()
     {
         return manager;
@@ -26,7 +27,7 @@ public class Manager : MonoBehaviour
             minesCount = 0;
             mines = GameObject.FindGameObjectsWithTag("Mine").ToList();
             minesLeft = mines.Count;
-            DontDestroyOnLoad(manager);
+            //DontDestroyOnLoad(manager);
         }
         else
         {
@@ -37,6 +38,11 @@ public class Manager : MonoBehaviour
     public void AddMinesCount()
     {
         minesCount++;
+    }
+
+    public void SetPause(bool value)
+    {
+        isPaused = value;
     }
 
     public void SetCurrentToolUsed(string name)
@@ -62,6 +68,11 @@ public class Manager : MonoBehaviour
     public int GetMinesLeft()
     {
         return minesLeft;
+    }
+
+    public bool GetPaused()
+    {
+        return isPaused;
     }
 
     public void RemoveMine(GameObject mine)

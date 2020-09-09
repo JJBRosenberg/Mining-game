@@ -293,6 +293,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minesCount: 0
+  minesLeft: 0
+  mines: []
+  currentToolUsed: 
 --- !u!114 &68383525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,11 +308,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b1b2485c35f8647976a65f258a710b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   distance: 50
   interactText: {fileID: 2135449824}
   completeText: {fileID: 674679523}
   cam: {fileID: 1507844311}
+  isHoldingRightTool: 0
 --- !u!114 &68383526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,6 +452,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4291405010095846945, guid: ffd2d57a5decd3443b343b3f5cbd456a,
+        type: 3}
+      propertyPath: textToHide
+      value: 
+      objectReference: {fileID: 911608787}
+    - target: {fileID: 4291405010095846945, guid: ffd2d57a5decd3443b343b3f5cbd456a,
+        type: 3}
+      propertyPath: minesLeftText
+      value: 
+      objectReference: {fileID: 911608789}
     - target: {fileID: 4291405010095846949, guid: ffd2d57a5decd3443b343b3f5cbd456a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -598,7 +611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &674679524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,6 +698,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 266656597}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &911608787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6040997902618760773, guid: 9e06f3b597fab644ab955e3d1c8cc52e,
+    type: 3}
+  m_PrefabInstance: {fileID: 266656597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &911608789 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6040997902618760775, guid: 9e06f3b597fab644ab955e3d1c8cc52e,
+    type: 3}
+  m_PrefabInstance: {fileID: 266656597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911608787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &967214784
 PrefabInstance:
   m_ObjectHideFlags: 0

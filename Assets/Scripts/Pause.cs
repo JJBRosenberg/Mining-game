@@ -41,6 +41,7 @@ public class Pause : MonoBehaviour
         isPaused = true;
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
+        Manager.GetManager().SetPause(true);
         player.enabled = false;
         pauseMenu.SetActive(true);
         cameraController.enabled = false;
@@ -52,6 +53,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         player.enabled = true;
+        Manager.GetManager().SetPause(false);
         pauseMenu.SetActive(false);
         cameraController.enabled = true;
     }
