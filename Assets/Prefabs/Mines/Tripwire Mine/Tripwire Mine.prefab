@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2731593687730379846}
   m_Layer: 0
-  m_Name: bottle_normal
+  m_Name: Tripwire Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

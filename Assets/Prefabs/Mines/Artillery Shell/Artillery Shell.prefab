@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1093851160131554946}
   - component: {fileID: 4071808495820030247}
   - component: {fileID: 2262230919166670317}
+  - component: {fileID: 3850775257367804292}
   m_Layer: 0
-  m_Name: SHELL
+  m_Name: Artillery Shell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3850775257367804292
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316927050730050616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 63.634518, y: 336.58304, z: 63.38948}
+  m_Center: {x: 0.122518554, y: 120.950294, z: 0.0000028610234}

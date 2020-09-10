@@ -1,0 +1,361 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6585319701365866967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 604374506519400402}
+  - component: {fileID: 1858207634132959976}
+  - component: {fileID: 3913799563414314766}
+  m_Layer: 8
+  m_Name: TripwireMine
+  m_TagString: Mine
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &604374506519400402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585319701365866967}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.168514, y: 2.0165327, z: -8.050172}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9220284517234439295}
+  - {fileID: 3718308323458832560}
+  - {fileID: 74997171708179343}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1858207634132959976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585319701365866967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c928ce50e2d80544835adfee680f123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolsToUse: []
+  mineModels:
+  - {fileID: 8412397850888679109}
+  - {fileID: 4094270229630419466}
+  - {fileID: 739049021404047669}
+  toolIndex: 0
+--- !u!65 &3913799563414314766
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585319701365866967}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1684494, y: 0.61420655, z: 0.17452383}
+  m_Center: {x: -0.002790451, y: 0.09616172, z: 0.00589633}
+--- !u!1001 &1384551801443822607
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 604374506519400402}
+    m_Modifications:
+    - target: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835018576395552058, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_Name
+      value: Tripwire Mine_defused
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835018576395552058, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835018576395552058, guid: fe1980410a950164e9eaa8e777794856,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe1980410a950164e9eaa8e777794856, type: 3}
+--- !u!1 &739049021404047669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1835018576395552058, guid: fe1980410a950164e9eaa8e777794856,
+    type: 3}
+  m_PrefabInstance: {fileID: 1384551801443822607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &74997171708179343 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1314095619228082048, guid: fe1980410a950164e9eaa8e777794856,
+    type: 3}
+  m_PrefabInstance: {fileID: 1384551801443822607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2743345104728456897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 604374506519400402}
+    m_Modifications:
+    - target: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.209
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.515
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216779005295688907, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_Name
+      value: Tripwire Mine_wireless
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216779005295688907, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216779005295688907, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771586797420752377, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876108823692945047, guid: 4380b00c4690dd1438ce82349e2471c4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4380b00c4690dd1438ce82349e2471c4, type: 3}
+--- !u!1 &4094270229630419466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2216779005295688907, guid: 4380b00c4690dd1438ce82349e2471c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2743345104728456897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3718308323458832560 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1551565311914878577, guid: 4380b00c4690dd1438ce82349e2471c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2743345104728456897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6493511260348655673
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 604374506519400402}
+    m_Modifications:
+    - target: {fileID: 408246343675862176, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591584945345812430, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.082
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.207
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.515
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360601559228352252, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_Name
+      value: Tripwire Mine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360601559228352252, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888002664189878437, guid: bea08e4087185b44e8f00201dbcad17d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bea08e4087185b44e8f00201dbcad17d, type: 3}
+--- !u!1 &8412397850888679109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3360601559228352252, guid: bea08e4087185b44e8f00201dbcad17d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6493511260348655673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9220284517234439295 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2731593687730379846, guid: bea08e4087185b44e8f00201dbcad17d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6493511260348655673}
+  m_PrefabAsset: {fileID: 0}

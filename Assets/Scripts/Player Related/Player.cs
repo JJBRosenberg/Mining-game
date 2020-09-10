@@ -55,13 +55,16 @@ public class Player : MonoBehaviour
         {
             Tool currTool = GetComponentInChildren<Tool>();
             MineScript mine = hit.collider.GetComponent<MineScript>();
-            if (currTool.GetName() == mine.toolsToUse[mine.GetNeededToolIndex()])
+            if (!mine.GetFinished())
             {
-                interactText.SetActive(true);
-            }
-            else if (currTool.GetName() != mine.toolsToUse[mine.GetNeededToolIndex()])
-            {
-                interactText.SetActive(false);
+                if (currTool.GetName() == mine.toolsToUse[mine.GetNeededToolIndex()])
+                {
+                    interactText.SetActive(true);
+                }
+                else if (currTool.GetName() != mine.toolsToUse[mine.GetNeededToolIndex()])
+                {
+                    interactText.SetActive(false);
+                }
             }
         }
     }
@@ -89,9 +92,14 @@ public class Player : MonoBehaviour
                     
                     if (mine.GetNeededToolIndex() == mine.GetLastToolIndex())
                     {
+                        mine.SetFinished(true);
+                        if (mine.GetLastToolIndex() == 1)
+                        {
+                            Manager.GetManager().DestroyMine(hit.collider.gameObject);
+                        }
                         Manager.GetManager().RemoveMine(hit.collider.gameObject);
                         Manager.GetManager().AddMinesCount();
-                        //canvas.SetActive(true);
+                        
                     }
                 }
             }

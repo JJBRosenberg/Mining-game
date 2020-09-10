@@ -17,7 +17,7 @@ public class MetalDetector : MonoBehaviour
     {
         
         timer = Time.time;
-        mines = GameObject.FindGameObjectsWithTag("Mine").ToList();
+        mines = Manager.GetManager().GetMines();
         closestMine = GetClosestMine(mines);
     }
 

@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 603289768043007500}
+  - component: {fileID: 8626550168543214578}
   m_Layer: 0
-  m_Name: MINE2_normal
+  m_Name: Timer Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,6 +37,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8626550168543214578
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221943524237808822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.68283844, y: 0.15930647, z: 1}
+  m_Center: {x: -0.3497467, y: 0.07711789, z: 0}
 --- !u!1 &436801040918269108
 GameObject:
   m_ObjectHideFlags: 0

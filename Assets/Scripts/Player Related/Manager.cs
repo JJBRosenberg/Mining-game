@@ -75,11 +75,21 @@ public class Manager : MonoBehaviour
         return isPaused;
     }
 
+    public List<GameObject> GetMines()
+    {
+        return mines;
+    }
+    
     public void RemoveMine(GameObject mine)
     {
-        Destroy(mine);
+        //Destroy(mine);
         mines.Remove(mine);
         minesLeft = mines.Count;
+    }
+
+    public void DestroyMine(GameObject mine)
+    {
+        Destroy(mine);
     }
     
 
