@@ -25,7 +25,7 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        cameraAnimator.SetBool("isWalking", playerScript.isMoving);
+        cameraAnimator.SetBool("isWalking", playerScript.IsMoving);
     }
 
     // Update is called once per frame

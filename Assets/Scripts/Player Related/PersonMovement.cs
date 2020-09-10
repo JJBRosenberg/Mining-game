@@ -10,6 +10,9 @@ public class PersonMovement : MonoBehaviour
     [SerializeField] private bool isMoving;
     
     private Rigidbody rb;
+
+    public bool IsMoving { get => isMoving; private set => isMoving = value; }
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -21,11 +24,11 @@ public class PersonMovement : MonoBehaviour
     {
         if (rb.velocity != Vector3.zero)
         {
-            isMoving = true;
+            IsMoving = true;
         }
         else
         {
-            isMoving = false;
+            IsMoving = false;
         }
         //cameraAnimator.SetBool("isMoving", isMoving);
     }
