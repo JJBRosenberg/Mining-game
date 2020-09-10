@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4912508738437897704}
   - component: {fileID: 3868375364910952490}
   - component: {fileID: 8894072190237811426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,8 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5148686628254678196}
-  - component: {fileID: 4349994648522633347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Landmine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +104,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5492174488547894798}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -35.034794, y: 0.5871007, z: -30.705729}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
@@ -113,16 +112,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4349994648522633347
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5492174488547894798}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 120.37048, y: 14.982072, z: 44.414986}
-  m_Center: {x: -0.44631958, y: -0.84402114, z: -21.707493}
