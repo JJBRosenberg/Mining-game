@@ -1,66 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &313045294
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 313045295}
-  m_Layer: 0
-  m_Name: Map (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &313045295
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313045294}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1589280985}
-  m_Father: {fileID: 8138791328855493360}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &730257679
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 730257680}
-  m_Layer: 0
-  m_Name: Pliers (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &730257680
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730257679}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8138791328855493360}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,82 +120,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1589280983
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1589280985}
-  - component: {fileID: 1589280984}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1589280985
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589280983}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 313045295}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1589280984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589280983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07b5e17c2a9c0d4ba4d1db4348665ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Map
-  sound: {fileID: 0}
-  toolSprite: {fileID: 0}
---- !u!1 &2024306863
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2024306864}
-  m_Layer: 0
-  m_Name: Wire Cutter (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2024306864
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024306863}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8138791328855493360}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &6826531643667456756
 AudioSource:
   m_ObjectHideFlags: 0
@@ -371,112 +234,6 @@ MonoBehaviour:
   timer: 0
   closestMine: {fileID: 0}
   mines: []
---- !u!1 &1463065281232600120
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2561497715622872454}
-  m_Layer: 0
-  m_Name: Pliers (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2561497715622872454
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463065281232600120}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8138791328855493360}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2047001462200783729
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1455708376349331923}
-  - component: {fileID: 7146211213740770163}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1455708376349331923
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047001462200783729}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6623066855468196856}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7146211213740770163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047001462200783729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07b5e17c2a9c0d4ba4d1db4348665ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Map
-  sound: {fileID: 0}
-  toolSprite: {fileID: 0}
---- !u!1 &2156341484522358016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5134641518368526273}
-  m_Layer: 0
-  m_Name: Wire Cutter (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5134641518368526273
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2156341484522358016}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8138791328855493360}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6993775722039417738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,52 +248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Angle Grinder
   sound: {fileID: 8300000, guid: 0aec8b5be0b4d5b49900e6d754c77be5, type: 3}
-  toolSprite: {fileID: 0}
---- !u!1 &2506993913873623923
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6623066855468196856}
-  m_Layer: 0
-  m_Name: Map (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6623066855468196856
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2506993913873623923}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1455708376349331923}
-  m_Father: {fileID: 8138791328855493360}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8545296687269236901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3848227722618256087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07b5e17c2a9c0d4ba4d1db4348665ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Wire Cutter
-  sound: {fileID: 8300000, guid: c9a71fc93d1b43c409b6a90ac8343c85, type: 3}
   toolSprite: {fileID: 0}
 --- !u!114 &3849975742408898788
 MonoBehaviour:
@@ -585,13 +296,7 @@ Transform:
   - {fileID: 5773701956013948471}
   - {fileID: 7090014908823727090}
   - {fileID: 481057080406569481}
-  - {fileID: 1382741197838779585}
-  - {fileID: 730257680}
-  - {fileID: 313045295}
-  - {fileID: 2024306864}
-  - {fileID: 2561497715622872454}
-  - {fileID: 6623066855468196856}
-  - {fileID: 5134641518368526273}
+  - {fileID: 8571410817496525742}
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -709,7 +414,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &1342034593
 CapsuleCollider:
@@ -819,6 +524,102 @@ MonoBehaviour:
   name: Gloves
   sound: {fileID: 8300000, guid: 06f5dca6fcf3538449493b6225135a76, type: 3}
   toolSprite: {fileID: 0}
+--- !u!114 &1594725124073382917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9059012731727933716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b5e17c2a9c0d4ba4d1db4348665ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Wire Cutter
+  sound: {fileID: 8300000, guid: c9a71fc93d1b43c409b6a90ac8343c85, type: 3}
+  toolSprite: {fileID: 0}
+--- !u!1001 &2120419889489285773
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8138791328855493360}
+    m_Modifications:
+    - target: {fileID: 6977530144320447385, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Cutter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -39.351288
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.18866694
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.202986
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc3d1d406080f124f9f11a9e012900d7, type: 3}
+--- !u!1 &9059012731727933716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6977530144320447385, guid: fc3d1d406080f124f9f11a9e012900d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2120419889489285773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8571410817496525742 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7754910615260150051, guid: fc3d1d406080f124f9f11a9e012900d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2120419889489285773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3460291159811892809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -991,109 +792,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5409901407758939164, guid: 60c5faf25395f9c4c9c6dfbd643c9b5f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 60c5faf25395f9c4c9c6dfbd643c9b5f, type: 3}
---- !u!4 &481057080406569481 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3927904951696164105, guid: 60c5faf25395f9c4c9c6dfbd643c9b5f,
-    type: 3}
-  m_PrefabInstance: {fileID: 3472194377114777344}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2376444502607121439 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1212987603932625695, guid: 60c5faf25395f9c4c9c6dfbd643c9b5f,
     type: 3}
   m_PrefabInstance: {fileID: 3472194377114777344}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3777454480998943871
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8138791328855493360}
-    m_Modifications:
-    - target: {fileID: 75312628324300456, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_Name
-      value: Wire Cutter
-      objectReference: {fileID: 0}
-    - target: {fileID: 75312628324300456, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823729388745868813, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: feac3e42c7691ee458299524468e686d, type: 2}
-    m_RemovedComponents:
-    - {fileID: 6542922160277469611, guid: eb0e7bdce31fcd942bd480e25b1c9a03, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: eb0e7bdce31fcd942bd480e25b1c9a03, type: 3}
---- !u!1 &3848227722618256087 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 75312628324300456, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
-    type: 3}
-  m_PrefabInstance: {fileID: 3777454480998943871}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1382741197838779585 stripped
+--- !u!4 &481057080406569481 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2836226653198010558, guid: eb0e7bdce31fcd942bd480e25b1c9a03,
+  m_CorrespondingSourceObject: {fileID: 3927904951696164105, guid: 60c5faf25395f9c4c9c6dfbd643c9b5f,
     type: 3}
-  m_PrefabInstance: {fileID: 3777454480998943871}
+  m_PrefabInstance: {fileID: 3472194377114777344}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3985987575867212959
 PrefabInstance:
